@@ -1,19 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
+  <script>document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Isaac Kim, EIT — Structural Engineer</title>
-  <meta name="description" content="Isaac Kim, EIT — structural engineering intern at Hohbach-Lewin. Lateral analysis, seismic design, and structural detailing." />
+  <meta name="description" content="Isaac Kim, EIT — structural engineering intern at Hohbach-Lewin. Lateral analysis, seismic design, and structural detailing in RISA-3D, Enercalc, and AutoCAD." />
+
+  <!-- Open Graph / social -->
+  <meta property="og:title" content="Isaac Kim, EIT — Structural Engineer" />
+  <meta property="og:description" content="Structural engineering intern at Hohbach-Lewin. Lateral analysis, seismic design, and structural detailing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://platosplaydough.com" />
+  <meta name="theme-color" content="#15161a" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="scroll-progress" id="progress"></div>
+
   <header class="site-header">
     <div class="bar container">
-      <a class="brand" href="#top">ISAAC&nbsp;KIM</a>
+      <a class="brand" href="#top" aria-label="Isaac Kim — home">
+        <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 21 L12 4 L22 21 Z M7 21 L12 12 L17 21" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        ISAAC&nbsp;KIM
+      </a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -30,30 +45,47 @@
   <main id="top">
     <!-- Hero -->
     <section class="hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
       <div class="container">
         <div class="hero-grid">
           <div class="hero-text">
-            <p class="kicker">Structural Engineer · EIT <span>/</span> Los Angeles, CA</p>
-            <h1 class="display">Isaac<br />Kim</h1>
-            <p class="lead">
+            <p class="kicker reveal">Structural Engineer · EIT <span>/</span> Los Angeles, CA</p>
+            <h1 class="display reveal">Isaac<br />Kim</h1>
+            <p class="lead reveal">
               Structural engineering intern at Hohbach-Lewin and a dual-degree
               engineering student. I model and analyze structures, design lateral
               force-resisting systems, and detail buildings that are safe,
               efficient, and built to last.
             </p>
-            <div class="hero-actions">
+            <div class="hero-actions reveal">
               <a class="btn" href="#experience">View experience →</a>
               <a class="btn btn-link" href="#contact">Get in touch</a>
             </div>
           </div>
-          <div class="hero-portrait">
+          <div class="hero-portrait reveal">
             <img src="images/isaac.jpg" alt="Portrait of Isaac Kim" />
             <span class="portrait-tag">FIG. 01 — I. KIM</span>
           </div>
         </div>
       </div>
+
+      <!-- Animated Warren truss -->
       <div class="container">
-        <dl class="spec-row">
+        <svg class="truss" viewBox="0 0 1200 100" preserveAspectRatio="none" aria-hidden="true">
+          <polyline class="truss-line" points="0,82 1200,82" />
+          <polyline class="truss-line" points="120,18 1080,18" />
+          <polyline class="truss-line" points="0,82 120,18 240,82 360,18 480,82 600,18 720,82 840,18 960,82 1080,18 1200,82" />
+          <g class="truss-nodes">
+            <circle cx="0" cy="82" r="4"/><circle cx="240" cy="82" r="4"/><circle cx="480" cy="82" r="4"/>
+            <circle cx="720" cy="82" r="4"/><circle cx="960" cy="82" r="4"/><circle cx="1200" cy="82" r="4"/>
+            <circle cx="120" cy="18" r="4"/><circle cx="360" cy="18" r="4"/><circle cx="600" cy="18" r="4"/>
+            <circle cx="840" cy="18" r="4"/><circle cx="1080" cy="18" r="4"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="container">
+        <dl class="spec-row reveal">
           <div><dt>Role</dt><dd>Structural Engineering Intern</dd></div>
           <div><dt>Firm</dt><dd>Hohbach-Lewin</dd></div>
           <div><dt>Credential</dt><dd>EIT · FE Civil</dd></div>
@@ -62,20 +94,30 @@
       </div>
     </section>
 
+    <!-- Metrics band -->
+    <section class="metrics">
+      <div class="container metrics-grid">
+        <div class="metric reveal"><span class="num" data-count="3.90" data-decimals="2">3.90</span><span class="cap">Biola GPA — Engineering Physics</span></div>
+        <div class="metric reveal"><span class="num" data-count="3.81" data-decimals="2">3.81</span><span class="cap">UC San Diego GPA — Structural</span></div>
+        <div class="metric reveal"><span class="num">FE&nbsp;✓</span><span class="cap">Civil exam passed, 2025</span></div>
+        <div class="metric reveal"><span class="num">EIT</span><span class="cap">Certified, 2026 · PE/SE track</span></div>
+      </div>
+    </section>
+
     <!-- About -->
     <section id="about" class="section">
       <div class="container">
-        <header class="section-head">
+        <header class="section-head reveal">
           <span class="idx">01</span>
           <h2>About</h2>
         </header>
         <div class="about-body">
-          <p class="about-lead">
+          <p class="about-lead reveal">
             I'm a structural engineering professional and Engineer-in-Training
             based in the Los Angeles area — currently designing real structures
             as an intern at Hohbach-Lewin Structural and Civil Engineers.
           </p>
-          <p>
+          <p class="reveal">
             My path into engineering has been a wide one — from physics research
             and environmental work to hands-on structural design. I'm pursuing
             dual bachelor's degrees in Structural Engineering at UC&nbsp;San&nbsp;Diego
@@ -83,7 +125,7 @@
             exam in 2025 and earned my EIT in early 2026 — the first steps toward
             full PE/SE licensure.
           </p>
-          <p>
+          <p class="reveal">
             I care about sound load paths, buildable details, and clear
             communication with everyone on a project team. Good structure is
             rarely seen — but it's always felt.
@@ -95,12 +137,12 @@
     <!-- Experience -->
     <section id="experience" class="section">
       <div class="container">
-        <header class="section-head">
+        <header class="section-head reveal">
           <span class="idx">02</span>
           <h2>Experience</h2>
         </header>
 
-        <article class="entry">
+        <article class="entry reveal">
           <div class="entry-when"><span>Jun 2025</span><span>Present</span></div>
           <div class="entry-main">
             <h3>Structural Engineering Intern</h3>
@@ -115,7 +157,7 @@
           </div>
         </article>
 
-        <article class="entry">
+        <article class="entry reveal">
           <div class="entry-when"><span>Mar 2026</span><span>Jun 2026</span></div>
           <div class="entry-main">
             <h3>Structural Materials (SE 105) Grader</h3>
@@ -123,7 +165,7 @@
           </div>
         </article>
 
-        <article class="entry">
+        <article class="entry reveal">
           <div class="entry-when"><span>May 2024</span><span>Feb 2025</span></div>
           <div class="entry-main">
             <h3>Engineering Pathways Intern (GS-5)</h3>
@@ -135,7 +177,7 @@
           </div>
         </article>
 
-        <article class="entry">
+        <article class="entry reveal">
           <div class="entry-when"><span>Jul 2023</span><span>Dec 2023</span></div>
           <div class="entry-main">
             <h3>Operations &amp; Maintenance Engineering Intern</h3>
@@ -147,7 +189,7 @@
           </div>
         </article>
 
-        <article class="entry">
+        <article class="entry reveal">
           <div class="entry-when"><span>2021</span><span>2024</span></div>
           <div class="entry-main">
             <h3>Research &amp; Teaching Roles</h3>
@@ -164,11 +206,11 @@
     <!-- Skills -->
     <section id="skills" class="section">
       <div class="container">
-        <header class="section-head">
+        <header class="section-head reveal">
           <span class="idx">03</span>
           <h2>Skills &amp; Tools</h2>
         </header>
-        <div class="skills-grid">
+        <div class="skills-grid reveal">
           <div class="skill-col">
             <h4>Analysis &amp; Design</h4>
             <ul>
@@ -212,27 +254,27 @@
     <!-- Education -->
     <section id="education" class="section">
       <div class="container">
-        <header class="section-head">
+        <header class="section-head reveal">
           <span class="idx">04</span>
           <h2>Education &amp; Credentials</h2>
         </header>
         <div class="edu-list">
-          <div class="edu-row">
+          <div class="edu-row reveal">
             <div class="edu-school"><h3>UC San Diego</h3><p>Jacobs School of Engineering</p></div>
             <div class="edu-detail">B.S. Structural Engineering</div>
             <div class="edu-meta">2024–2026<br /><span>GPA 3.81</span></div>
           </div>
-          <div class="edu-row">
+          <div class="edu-row reveal">
             <div class="edu-school"><h3>Biola University</h3><p>Stewart Science Honors Program</p></div>
             <div class="edu-detail">B.S. Engineering Physics · Minor in Theology</div>
             <div class="edu-meta">2021–2026<br /><span>GPA 3.90</span></div>
           </div>
-          <div class="edu-row">
+          <div class="edu-row reveal">
             <div class="edu-school"><h3>EIT</h3><p>CA Board for Professional Engineers</p></div>
             <div class="edu-detail">Engineer-in-Training certification</div>
             <div class="edu-meta">2026</div>
           </div>
-          <div class="edu-row">
+          <div class="edu-row reveal">
             <div class="edu-school"><h3>FE Civil</h3><p>NCEES</p></div>
             <div class="edu-detail">Fundamentals of Engineering, Civil</div>
             <div class="edu-meta">2025</div>
@@ -241,19 +283,36 @@
       </div>
     </section>
 
+    <!-- Testimonial -->
+    <section class="section section-quote">
+      <div class="container">
+        <figure class="quote reveal">
+          <blockquote>
+            “Isaac's keen initiative to produce work of only the highest quality
+            is just as rare as it is renowned by all of our peers and professors.
+            Integrity is the unmistakable cornerstone of his character.”
+          </blockquote>
+          <figcaption>
+            <span class="q-name">Carol Jin, EIT</span>
+            <span class="q-role">Water Services Intern, CDM Smith — studied alongside Isaac at Biola</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
     <!-- Contact -->
     <section id="contact" class="section section-contact">
       <div class="container">
-        <header class="section-head">
+        <header class="section-head reveal">
           <span class="idx">05</span>
           <h2>Contact</h2>
         </header>
         <div class="contact-body">
-          <p class="contact-lead">Have a project, a question, or an opportunity? Let's connect.</p>
-          <a class="contact-link" href="https://www.linkedin.com/in/eyesackim" target="_blank" rel="noopener">
+          <p class="contact-lead reveal">Have a project, a question, or an opportunity? Let's connect.</p>
+          <a class="contact-link reveal" href="https://www.linkedin.com/in/eyesackim" target="_blank" rel="noopener">
             linkedin.com/in/eyesackim →
           </a>
-          <p class="contact-loc">Los Angeles Metropolitan Area</p>
+          <p class="contact-loc reveal">Los Angeles Metropolitan Area · Open to structural engineering roles</p>
         </div>
       </div>
     </section>
@@ -262,7 +321,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <span>ISAAC KIM, EIT</span>
-      <span>© <span id="year"></span></span>
+      <span>© <span id="year"></span> · Built structurally</span>
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
