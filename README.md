@@ -1,6 +1,7 @@
 # Isaac Kim — Personal Website
 
-A clean, responsive single-page portfolio for Isaac Kim, structural engineer (PE · SE).
+A clean, responsive single-page portfolio for Isaac Kim, EIT — structural
+engineering intern at Hohbach-Lewin.
 
 ## Stack
 
@@ -9,6 +10,7 @@ Plain static site — no build step, no dependencies.
 - `index.html` — page content and structure
 - `styles.css` — styling (responsive, mobile nav)
 - `main.js` — mobile nav toggle and footer year
+- `images/` — portrait (`isaac.jpg`) and assets
 
 ## Running locally
 
@@ -21,9 +23,10 @@ python3 -m http.server 8000
 
 ## Customizing
 
-Most content lives in `index.html`. Update the email, LinkedIn URL, project
-details, and bio there. Colors and fonts are defined as CSS variables at the
-top of `styles.css`.
+Most content lives in `index.html` (bio, experience, education, contact).
+The portrait is `images/isaac.jpg` — swap in a higher-resolution headshot
+under the same name to upgrade it. Colors and fonts are defined as CSS
+variables at the top of `styles.css`.
 
 ## Deploying
 

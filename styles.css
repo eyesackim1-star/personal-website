@@ -88,6 +88,20 @@ h1, h2, h3 { font-family: "Fraunces", Georgia, serif; line-height: 1.1; }
 .hero {
   padding: clamp(72px, 14vw, 160px) 0 clamp(56px, 9vw, 110px);
 }
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: clamp(32px, 6vw, 72px);
+  align-items: center;
+}
+.hero-portrait img {
+  width: clamp(150px, 22vw, 220px);
+  height: clamp(150px, 22vw, 220px);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--bg-alt);
+  box-shadow: 0 16px 40px rgba(28, 29, 34, 0.16);
+}
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -231,6 +245,53 @@ h1, h2, h3 { font-family: "Fraunces", Georgia, serif; line-height: 1.1; }
 .project p { color: var(--ink-soft); }
 .note { margin-top: 28px; color: var(--ink-soft); font-size: 0.9rem; font-style: italic; }
 
+/* Experience timeline */
+.timeline { margin-top: 40px; display: grid; gap: 20px; }
+.entry {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  position: relative;
+}
+.entry-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.entry h3 { font-size: 1.25rem; font-weight: 600; }
+.org { color: var(--ink-soft); font-size: 0.95rem; margin-top: 2px; }
+.period {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.entry-points {
+  list-style: none;
+  margin-top: 16px;
+  display: grid;
+  gap: 8px;
+}
+.entry-points li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--ink-soft);
+  font-size: 0.97rem;
+}
+.entry-points li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--line);
@@ -266,4 +327,7 @@ h1, h2, h3 { font-family: "Fraunces", Georgia, serif; line-height: 1.1; }
   .nav-links.open { display: flex; }
   .nav-links li { padding: 10px 0; border-bottom: 1px solid var(--line); }
   .grid-2 { grid-template-columns: 1fr; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-portrait { order: -1; }
+  .entry-head { flex-direction: column; gap: 4px; }
 }
