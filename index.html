@@ -4,224 +4,256 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Isaac Kim, EIT — Structural Engineer</title>
-  <meta name="description" content="Isaac Kim, EIT — structural engineering intern at Hohbach-Lewin, focused on lateral analysis, seismic design, and structural detailing." />
+  <meta name="description" content="Isaac Kim, EIT — structural engineering intern at Hohbach-Lewin. Lateral analysis, seismic design, and structural detailing." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav container">
-      <a class="brand" href="#top">IK<span class="brand-dot">.</span></a>
+    <div class="bar container">
+      <a class="brand" href="#top">ISAAC&nbsp;KIM</a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+      <nav class="nav-links">
+        <a href="#about"><i>01</i> About</a>
+        <a href="#experience"><i>02</i> Experience</a>
+        <a href="#skills"><i>03</i> Skills</a>
+        <a href="#education"><i>04</i> Education</a>
+        <a href="#contact"><i>05</i> Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main id="top">
     <!-- Hero -->
     <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <p class="eyebrow">Structural Engineer · EIT</p>
-          <h1>Isaac Kim</h1>
-          <p class="lead">
-            Structural engineering intern at Hohbach-Lewin and a dual-degree
-            engineering student — designing lateral systems, running analyses,
-            and detailing structures that are safe, efficient, and built to last.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#experience">View experience</a>
-            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <p class="kicker">Structural Engineer · EIT <span>/</span> Los Angeles, CA</p>
+            <h1 class="display">Isaac<br />Kim</h1>
+            <p class="lead">
+              Structural engineering intern at Hohbach-Lewin and a dual-degree
+              engineering student. I model and analyze structures, design lateral
+              force-resisting systems, and detail buildings that are safe,
+              efficient, and built to last.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="#experience">View experience →</a>
+              <a class="btn btn-link" href="#contact">Get in touch</a>
+            </div>
+          </div>
+          <div class="hero-portrait">
+            <img src="images/isaac.jpg" alt="Portrait of Isaac Kim" />
+            <span class="portrait-tag">FIG. 01 — I. KIM</span>
           </div>
         </div>
-        <div class="hero-portrait">
-          <img src="images/isaac.jpg" alt="Portrait of Isaac Kim" />
-        </div>
+      </div>
+      <div class="container">
+        <dl class="spec-row">
+          <div><dt>Role</dt><dd>Structural Engineering Intern</dd></div>
+          <div><dt>Firm</dt><dd>Hohbach-Lewin</dd></div>
+          <div><dt>Credential</dt><dd>EIT · FE Civil</dd></div>
+          <div><dt>Languages</dt><dd>English · Korean</dd></div>
+        </dl>
       </div>
     </section>
 
     <!-- About -->
     <section id="about" class="section">
-      <div class="container grid-2">
-        <div>
-          <h2 class="section-title">About</h2>
-        </div>
-        <div class="prose">
-          <p>
+      <div class="container">
+        <header class="section-head">
+          <span class="idx">01</span>
+          <h2>About</h2>
+        </header>
+        <div class="about-body">
+          <p class="about-lead">
             I'm a structural engineering professional and Engineer-in-Training
-            (EIT) based in the Los Angeles area. I'm currently a structural
-            engineering intern at Hohbach-Lewin Structural and Civil Engineers,
-            where I model and analyze structures, design lateral force-resisting
-            systems, and assemble calculation packages for real projects.
+            based in the Los Angeles area — currently designing real structures
+            as an intern at Hohbach-Lewin Structural and Civil Engineers.
           </p>
           <p>
             My path into engineering has been a wide one — from physics research
-            and environmental engineering to hands-on structural design — and
-            I'm pursuing dual bachelor's degrees in Structural Engineering at
-            UC San Diego and Engineering Physics at Biola University. I passed
-            the FE Civil exam in 2025 and earned my EIT in early 2026, the first
-            steps toward full PE/SE licensure.
+            and environmental work to hands-on structural design. I'm pursuing
+            dual bachelor's degrees in Structural Engineering at UC&nbsp;San&nbsp;Diego
+            and Engineering Physics at Biola University. I passed the FE Civil
+            exam in 2025 and earned my EIT in early 2026 — the first steps toward
+            full PE/SE licensure.
           </p>
           <p>
             I care about sound load paths, buildable details, and clear
             communication with everyone on a project team. Good structure is
             rarely seen — but it's always felt.
           </p>
-          <ul class="creds">
-            <li><strong>Credential</strong><span>Engineer-in-Training (EIT)</span></li>
-            <li><strong>Current role</strong><span>Structural Engineering Intern, Hohbach-Lewin</span></li>
-            <li><strong>Location</strong><span>Los Angeles Metropolitan Area</span></li>
-            <li><strong>Languages</strong><span>English · Korean</span></li>
-          </ul>
         </div>
       </div>
     </section>
 
     <!-- Experience -->
-    <section id="experience" class="section section-alt">
+    <section id="experience" class="section">
       <div class="container">
-        <h2 class="section-title">Experience</h2>
-        <div class="timeline">
-          <article class="entry">
-            <div class="entry-head">
-              <div>
-                <h3>Structural Engineering Intern</h3>
-                <p class="org">Hohbach-Lewin Structural and Civil Engineers · South Pasadena, CA</p>
-              </div>
-              <span class="period">Jun 2025 – Present</span>
-            </div>
-            <ul class="entry-points">
-              <li>Modeled and performed lateral analyses in RISA-3D using ASCE 7 load combinations, seismic design forces, and wind pressures.</li>
-              <li>Designed lateral force-resisting systems — moment frames, shear walls, and diaphragms — along with connections including chords, collectors, and bolts.</li>
-              <li>Completed joist, beam, and column design in Enercalc, optimizing structural integrity while cutting unnecessary cost.</li>
-              <li>Built structural spreadsheets for pad footing design, equipment anchorage, and overturning checks.</li>
-              <li>Produced calculation packages with clear structural plans, AutoCAD details, and traceable load paths; logged code changes between ASCE 7-16 and ASCE 7-22.</li>
+        <header class="section-head">
+          <span class="idx">02</span>
+          <h2>Experience</h2>
+        </header>
+
+        <article class="entry">
+          <div class="entry-when"><span>Jun 2025</span><span>Present</span></div>
+          <div class="entry-main">
+            <h3>Structural Engineering Intern</h3>
+            <p class="org">Hohbach-Lewin Structural &amp; Civil Engineers — South Pasadena, CA</p>
+            <ul>
+              <li>Modeled and ran lateral analyses in RISA-3D using ASCE&nbsp;7 load combinations, seismic forces, and wind pressures.</li>
+              <li>Designed lateral force-resisting systems — moment frames, shear walls, diaphragms — plus chord, collector, and bolt connections.</li>
+              <li>Sized joists, beams, and columns in Enercalc, balancing structural integrity against cost.</li>
+              <li>Built spreadsheets for pad-footing design, equipment anchorage, and overturning checks.</li>
+              <li>Produced calc packages with clean plans, AutoCAD details, and traceable load paths; logged ASCE&nbsp;7-16 → 7-22 changes.</li>
             </ul>
-          </article>
+          </div>
+        </article>
 
-          <article class="entry">
-            <div class="entry-head">
-              <div>
-                <h3>Structural Materials (SE 105) Grader</h3>
-                <p class="org">UC San Diego · Part-time</p>
-              </div>
-              <span class="period">Mar 2026 – Jun 2026</span>
-            </div>
-          </article>
+        <article class="entry">
+          <div class="entry-when"><span>Mar 2026</span><span>Jun 2026</span></div>
+          <div class="entry-main">
+            <h3>Structural Materials (SE 105) Grader</h3>
+            <p class="org">UC San Diego — Part-time</p>
+          </div>
+        </article>
 
-          <article class="entry">
-            <div class="entry-head">
-              <div>
-                <h3>Engineering Pathways Intern (GS-5)</h3>
-                <p class="org">US Environmental Protection Agency (EPA) · Los Angeles, CA</p>
-              </div>
-              <span class="period">May 2024 – Feb 2025</span>
-            </div>
-            <ul class="entry-points">
-              <li>Inspected large-quantity generators for RCRA hazardous-waste compliance, contributing to four compliance evaluation reports.</li>
-              <li>Drafted and issued Expedited Settlement Agreements enforcing environmental standards, totaling $20,000+ in penalties.</li>
+        <article class="entry">
+          <div class="entry-when"><span>May 2024</span><span>Feb 2025</span></div>
+          <div class="entry-main">
+            <h3>Engineering Pathways Intern (GS-5)</h3>
+            <p class="org">US Environmental Protection Agency — Los Angeles, CA</p>
+            <ul>
+              <li>Inspected large-quantity generators for RCRA hazardous-waste compliance across four evaluation reports.</li>
+              <li>Drafted Expedited Settlement Agreements enforcing standards, totaling $20,000+ in penalties.</li>
             </ul>
-          </article>
+          </div>
+        </article>
 
-          <article class="entry">
-            <div class="entry-head">
-              <div>
-                <h3>Operations &amp; Maintenance Engineering Intern</h3>
-                <p class="org">Orange County Sanitation District</p>
-              </div>
-              <span class="period">Jul 2023 – Dec 2023</span>
-            </div>
-            <ul class="entry-points">
-              <li>Organized 2,000+ equipment service manuals by loop tag, cutting manual sorting time by over 50%.</li>
+        <article class="entry">
+          <div class="entry-when"><span>Jul 2023</span><span>Dec 2023</span></div>
+          <div class="entry-main">
+            <h3>Operations &amp; Maintenance Engineering Intern</h3>
+            <p class="org">Orange County Sanitation District</p>
+            <ul>
+              <li>Organized 2,000+ equipment service manuals by loop tag, cutting sort time by 50%+.</li>
               <li>Authored a 40-page intern handbook adopted as a reference for future interns.</li>
             </ul>
-          </article>
+          </div>
+        </article>
 
-          <article class="entry">
-            <div class="entry-head">
-              <div>
-                <h3>Research &amp; Teaching Roles</h3>
-                <p class="org">Biola University · TA, tutor, and directed-research roles</p>
-              </div>
-              <span class="period">2021 – 2024</span>
-            </div>
-            <ul class="entry-points">
-              <li>Engineering directed research: built a 3D-printed protective encasement for an Arduino PPG sensor for deep-vein-thrombosis detection.</li>
-              <li>TA and academic mentor across physics, astronomy, and mathematics; tutored 5–10 students weekly.</li>
+        <article class="entry">
+          <div class="entry-when"><span>2021</span><span>2024</span></div>
+          <div class="entry-main">
+            <h3>Research &amp; Teaching Roles</h3>
+            <p class="org">Biola University — TA, tutor, directed research</p>
+            <ul>
+              <li>Built a 3D-printed protective encasement for an Arduino PPG sensor for deep-vein-thrombosis detection.</li>
+              <li>TA and mentor across physics, astronomy, and mathematics; tutored 5–10 students weekly.</li>
             </ul>
-          </article>
-        </div>
+          </div>
+        </article>
       </div>
     </section>
 
     <!-- Skills -->
     <section id="skills" class="section">
       <div class="container">
-        <h2 class="section-title">Skills &amp; Tools</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Analysis &amp; Design</h3>
-            <p>Lateral and gravity analysis, seismic and wind design to ASCE 7, LFRS and connection design.</p>
-          </article>
-          <article class="card">
-            <h3>Software</h3>
-            <p>RISA-3D, Enercalc, Hilti PROFIS, AutoCAD, Autodesk Fusion 360.</p>
-          </article>
-          <article class="card">
-            <h3>Documentation</h3>
-            <p>Calculation packages, structural spreadsheets, traceable load paths, and code-change tracking.</p>
-          </article>
-          <article class="card">
-            <h3>Core Strengths</h3>
-            <p>Computer-aided design, numerical analysis, creative problem solving, communication, and organization.</p>
-          </article>
+        <header class="section-head">
+          <span class="idx">03</span>
+          <h2>Skills &amp; Tools</h2>
+        </header>
+        <div class="skills-grid">
+          <div class="skill-col">
+            <h4>Analysis &amp; Design</h4>
+            <ul>
+              <li>Lateral &amp; gravity analysis</li>
+              <li>Seismic &amp; wind design (ASCE 7)</li>
+              <li>LFRS &amp; connection design</li>
+              <li>Foundation &amp; anchorage design</li>
+            </ul>
+          </div>
+          <div class="skill-col">
+            <h4>Software</h4>
+            <ul>
+              <li>RISA-3D</li>
+              <li>Enercalc</li>
+              <li>Hilti PROFIS</li>
+              <li>AutoCAD · Fusion 360</li>
+            </ul>
+          </div>
+          <div class="skill-col">
+            <h4>Documentation</h4>
+            <ul>
+              <li>Calculation packages</li>
+              <li>Structural spreadsheets</li>
+              <li>Traceable load paths</li>
+              <li>Code-change tracking</li>
+            </ul>
+          </div>
+          <div class="skill-col">
+            <h4>Strengths</h4>
+            <ul>
+              <li>Computer-aided design</li>
+              <li>Numerical analysis</li>
+              <li>Creative problem solving</li>
+              <li>Communication</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Education & credentials -->
-    <section id="education" class="section section-alt">
-      <div class="container grid-2">
-        <div>
-          <h2 class="section-title">Education &amp; Credentials</h2>
-        </div>
-        <div class="prose">
-          <ul class="creds">
-            <li><strong>UC San Diego</strong><span>B.S. Structural Engineering · 2024–2026 · GPA 3.81</span></li>
-            <li><strong>Biola University</strong><span>B.S. Engineering Physics · 2021–2026 · GPA 3.90</span></li>
-            <li><strong>EIT</strong><span>CA Board for Professional Engineers · 2026</span></li>
-            <li><strong>FE Civil Exam</strong><span>NCEES · 2025</span></li>
-            <li><strong>Honors</strong><span>Stewart Science Honors Program · NSLS member · Congressional Recognition</span></li>
-          </ul>
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="container">
+        <header class="section-head">
+          <span class="idx">04</span>
+          <h2>Education &amp; Credentials</h2>
+        </header>
+        <div class="edu-list">
+          <div class="edu-row">
+            <div class="edu-school"><h3>UC San Diego</h3><p>Jacobs School of Engineering</p></div>
+            <div class="edu-detail">B.S. Structural Engineering</div>
+            <div class="edu-meta">2024–2026<br /><span>GPA 3.81</span></div>
+          </div>
+          <div class="edu-row">
+            <div class="edu-school"><h3>Biola University</h3><p>Stewart Science Honors Program</p></div>
+            <div class="edu-detail">B.S. Engineering Physics · Minor in Theology</div>
+            <div class="edu-meta">2021–2026<br /><span>GPA 3.90</span></div>
+          </div>
+          <div class="edu-row">
+            <div class="edu-school"><h3>EIT</h3><p>CA Board for Professional Engineers</p></div>
+            <div class="edu-detail">Engineer-in-Training certification</div>
+            <div class="edu-meta">2026</div>
+          </div>
+          <div class="edu-row">
+            <div class="edu-school"><h3>FE Civil</h3><p>NCEES</p></div>
+            <div class="edu-detail">Fundamentals of Engineering, Civil</div>
+            <div class="edu-meta">2025</div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section">
-      <div class="container grid-2">
-        <div>
-          <h2 class="section-title">Contact</h2>
-        </div>
-        <div class="prose">
-          <p>
-            Have a project, a question, or an opportunity? I'd be glad to
-            connect.
-          </p>
-          <ul class="contact-list">
-            <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/eyesackim" target="_blank" rel="noopener">linkedin.com/in/eyesackim</a></li>
-            <li><span>Location</span><span>Los Angeles Metropolitan Area</span></li>
-          </ul>
+    <section id="contact" class="section section-contact">
+      <div class="container">
+        <header class="section-head">
+          <span class="idx">05</span>
+          <h2>Contact</h2>
+        </header>
+        <div class="contact-body">
+          <p class="contact-lead">Have a project, a question, or an opportunity? Let's connect.</p>
+          <a class="contact-link" href="https://www.linkedin.com/in/eyesackim" target="_blank" rel="noopener">
+            linkedin.com/in/eyesackim →
+          </a>
+          <p class="contact-loc">Los Angeles Metropolitan Area</p>
         </div>
       </div>
     </section>
@@ -229,7 +261,8 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>© <span id="year"></span> Isaac Kim, EIT</span>
+      <span>ISAAC KIM, EIT</span>
+      <span>© <span id="year"></span></span>
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
