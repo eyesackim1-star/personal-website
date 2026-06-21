@@ -175,6 +175,12 @@ h1, h2, h3, h4 { font-family: "Archivo", sans-serif; line-height: 1.02; }
   transition: background 0.2s var(--ease), color 0.2s var(--ease), transform 0.2s var(--ease);
 }
 .btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; transform: translateY(-2px); }
+.btn-outline {
+  background: none;
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+.btn-outline:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
 .btn-link {
   background: none; color: var(--ink); border-color: transparent;
   padding-inline: 6px; text-decoration: underline; text-underline-offset: 4px;
@@ -293,6 +299,42 @@ h1, h2, h3, h4 { font-family: "Archivo", sans-serif; line-height: 1.02; }
 .entry-main li { position: relative; padding-left: 22px; color: var(--ink-soft); font-size: 0.98rem; }
 .entry-main li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
 
+/* Projects */
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.project {
+  background: var(--paper);
+  padding: clamp(24px, 3vw, 36px);
+  transition: background 0.2s ease;
+}
+.project:hover { background: var(--panel); }
+.project-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.project-tag {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 4px 9px;
+}
+.project-when { font-family: "IBM Plex Mono", monospace; font-size: 0.74rem; color: var(--muted); }
+.project h3 { font-weight: 700; font-size: 1.45rem; letter-spacing: -0.015em; }
+.project-course { font-family: "IBM Plex Mono", monospace; font-size: 0.8rem; color: var(--muted); margin: 6px 0 18px; }
+.project ul { list-style: none; display: grid; gap: 9px; }
+.project li { position: relative; padding-left: 22px; color: var(--ink-soft); font-size: 0.97rem; }
+.project li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
+
 /* Skills */
 .skills-grid {
   display: grid;
@@ -325,6 +367,23 @@ h1, h2, h3, h4 { font-family: "Archivo", sans-serif; line-height: 1.02; }
 .edu-detail { color: var(--ink-soft); font-size: 1rem; }
 .edu-meta { text-align: right; font-size: 0.82rem; color: var(--ink); white-space: nowrap; }
 .edu-meta span { color: var(--muted); }
+.coursework {
+  margin-top: 32px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+.coursework span {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
 
 /* Testimonial */
 .section-quote { background: var(--panel); }
@@ -366,6 +425,22 @@ h1, h2, h3, h4 { font-family: "Archivo", sans-serif; line-height: 1.02; }
   transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
 }
 .contact-link:hover { color: var(--accent-soft); border-color: var(--accent-soft); }
+.contact-secondary {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+.contact-secondary a {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.85rem;
+  color: rgba(243,242,238,0.75);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(243,242,238,0.25);
+  padding-bottom: 2px;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.contact-secondary a:hover { color: var(--accent-soft); border-color: var(--accent-soft); }
 .contact-loc { font-size: 0.85rem; color: rgba(243,242,238,0.6); margin-top: 26px; text-transform: uppercase; letter-spacing: 0.05em; }
 
 /* Footer */
@@ -377,6 +452,7 @@ h1, h2, h3, h4 { font-family: "Archivo", sans-serif; line-height: 1.02; }
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .projects { grid-template-columns: 1fr; }
   .spec-row { grid-template-columns: repeat(2, 1fr); }
   .spec-row > div:nth-child(3) { border-left: 0; padding-left: 0; }
   .metrics-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 1px; }
