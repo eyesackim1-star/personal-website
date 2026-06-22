@@ -46,7 +46,7 @@
   <main id="top">
     <!-- Hero -->
     <section class="hero">
-      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <canvas id="lattice" class="hero-grid-bg" aria-hidden="true"></canvas>
       <div class="container">
         <div class="hero-grid">
           <div class="hero-text">
@@ -54,9 +54,7 @@
             <h1 class="display reveal">Isaac<br />Kim</h1>
             <p class="lead reveal">
               Structural engineering intern at Hohbach-Lewin, pursuing my M.S. in
-              Structural Engineering at UC&nbsp;San&nbsp;Diego. I model and analyze
-              structures, design lateral force-resisting systems, and detail
-              buildings that are safe, efficient, and built to last.
+              Structural Engineering at UC&nbsp;San&nbsp;Diego.
             </p>
             <div class="hero-actions reveal">
               <a class="btn" href="#projects">View projects →</a>
@@ -64,26 +62,33 @@
               <a class="btn btn-link" href="#contact">Get in touch</a>
             </div>
           </div>
-          <div class="hero-portrait reveal">
-            <img src="images/isaac.jpg" alt="Portrait of Isaac Kim" />
-            <span class="portrait-tag">FIG. 01 — I. KIM</span>
-          </div>
-        </div>
-      </div>
 
-      <!-- Animated Warren truss -->
-      <div class="container">
-        <svg class="truss" viewBox="0 0 1200 100" preserveAspectRatio="none" aria-hidden="true">
-          <polyline class="truss-line" points="0,82 1200,82" />
-          <polyline class="truss-line" points="120,18 1080,18" />
-          <polyline class="truss-line" points="0,82 120,18 240,82 360,18 480,82 600,18 720,82 840,18 960,82 1080,18 1200,82" />
-          <g class="truss-nodes">
-            <circle cx="0" cy="82" r="4"/><circle cx="240" cy="82" r="4"/><circle cx="480" cy="82" r="4"/>
-            <circle cx="720" cy="82" r="4"/><circle cx="960" cy="82" r="4"/><circle cx="1200" cy="82" r="4"/>
-            <circle cx="120" cy="18" r="4"/><circle cx="360" cy="18" r="4"/><circle cx="600" cy="18" r="4"/>
-            <circle cx="840" cy="18" r="4"/><circle cx="1080" cy="18" r="4"/>
-          </g>
-        </svg>
+          <!-- Interactive lateral-load / LFRS model -->
+          <figure class="hero-model reveal">
+            <div class="model-stage">
+              <svg id="frame" viewBox="0 0 600 584" role="img"
+                   aria-label="Interactive multi-story building under lateral seismic load, showing the lateral force-resisting system, story forces, base shear, and roof drift."></svg>
+              <figcaption class="model-cap">FIG. 01 — Lateral force-resisting system under seismic demand</figcaption>
+            </div>
+            <div class="model-controls">
+              <div class="seg" role="group" aria-label="Lateral system">
+                <button type="button" data-sys="moment" class="active">Moment frame</button>
+                <button type="button" data-sys="braced">Braced frame</button>
+                <button type="button" data-sys="wall">Shear wall</button>
+              </div>
+              <div class="ctrl-row">
+                <label for="m-intensity">Seismic demand</label>
+                <input id="m-intensity" type="range" min="0" max="100" value="50" />
+                <button id="m-shake" type="button" class="shake-btn">⚡ Simulate quake</button>
+              </div>
+              <dl class="model-readout">
+                <div><dt>Base shear</dt><dd id="ro-shear">—</dd></div>
+                <div><dt>Roof drift</dt><dd id="ro-drift">—</dd></div>
+                <div><dt>Drift ratio</dt><dd id="ro-ratio">—</dd></div>
+              </dl>
+            </div>
+          </figure>
+        </div>
       </div>
 
       <div class="container">
@@ -113,27 +118,33 @@
           <span class="idx">01</span>
           <h2>About</h2>
         </header>
-        <div class="about-body">
-          <p class="about-lead reveal">
-            I'm a structural engineering professional and Engineer-in-Training
-            based in the Los Angeles area — currently designing real structures
-            as an intern at Hohbach-Lewin, Inc.
-          </p>
-          <p class="reveal">
-            I'm pursuing my Master of Science in Structural Engineering at
-            UC&nbsp;San&nbsp;Diego (expected 2027), building on bachelor's degrees in
-            Structural Engineering at UC&nbsp;San&nbsp;Diego and Engineering Physics at
-            Biola University through a 3+2 program. I passed the FE Civil exam in
-            2025 and earned my EIT in early 2026 — the first steps toward full
-            PE/SE licensure.
-          </p>
-          <p class="reveal">
-            My academic design work spans full steel and concrete buildings, and
-            my internship has me deep in real wood-structure design — lateral
-            systems, connections, and calculation packages. I care about sound
-            load paths, buildable details, and clear communication. Good
-            structure is rarely seen — but it's always felt.
-          </p>
+        <div class="about-grid">
+          <div class="about-portrait reveal">
+            <img src="images/isaac.jpg" alt="Portrait of Isaac Kim" />
+            <span class="portrait-tag">I. KIM, EIT</span>
+          </div>
+          <div class="about-body">
+            <p class="about-lead reveal">
+              I'm a structural engineering professional and Engineer-in-Training
+              based in the Los Angeles area — currently designing real structures
+              as an intern at Hohbach-Lewin, Inc.
+            </p>
+            <p class="reveal">
+              I'm pursuing my Master of Science in Structural Engineering at
+              UC&nbsp;San&nbsp;Diego (expected 2027), building on bachelor's degrees in
+              Structural Engineering at UC&nbsp;San&nbsp;Diego and Engineering Physics at
+              Biola University through a 3+2 program. I passed the FE Civil exam in
+              2025 and earned my EIT in early 2026 — the first steps toward full
+              PE/SE licensure.
+            </p>
+            <p class="reveal">
+              My academic design work spans full steel and concrete buildings, and
+              my internship has me deep in real wood-structure design — lateral
+              systems, connections, and calculation packages. I care about sound
+              load paths, buildable details, and clear communication. Good
+              structure is rarely seen — but it's always felt.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -222,6 +233,67 @@
               <li>Engineered shear walls and boundary elements to meet seismic and ductility demands.</li>
             </ul>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equation marquee -->
+    <section class="marquee" aria-label="Governing equations of structural engineering">
+      <span class="marquee-label">The mathematics</span>
+      <div class="marquee-viewport">
+        <div class="marquee-track">
+          <span class="eq">&Sigma;F = 0&nbsp;&nbsp;&middot;&nbsp;&nbsp;&Sigma;M = 0</span>
+          <span class="eq">V = C<sub>s</sub>W</span>
+          <span class="eq">T = C<sub>t</sub>h<sub>n</sub><sup>x</sup></span>
+          <span class="eq">M<sub>max</sub> = PL/4</span>
+          <span class="eq">&delta; = 5wL<sup>4</sup>/384EI</span>
+          <span class="eq">P<sub>cr</sub> = &pi;<sup>2</sup>EI/(KL)<sup>2</sup></span>
+          <span class="eq">f<sub>b</sub> = Mc/I</span>
+          <span class="eq">&Delta;/h &le; 0.020</span>
+          <span class="eq">I = bh<sup>3</sup>/12</span>
+          <span class="eq" aria-hidden="true">&Sigma;F = 0&nbsp;&nbsp;&middot;&nbsp;&nbsp;&Sigma;M = 0</span>
+          <span class="eq" aria-hidden="true">V = C<sub>s</sub>W</span>
+          <span class="eq" aria-hidden="true">T = C<sub>t</sub>h<sub>n</sub><sup>x</sup></span>
+          <span class="eq" aria-hidden="true">M<sub>max</sub> = PL/4</span>
+          <span class="eq" aria-hidden="true">&delta; = 5wL<sup>4</sup>/384EI</span>
+          <span class="eq" aria-hidden="true">P<sub>cr</sub> = &pi;<sup>2</sup>EI/(KL)<sup>2</sup></span>
+          <span class="eq" aria-hidden="true">f<sub>b</sub> = Mc/I</span>
+          <span class="eq" aria-hidden="true">&Delta;/h &le; 0.020</span>
+          <span class="eq" aria-hidden="true">I = bh<sup>3</sup>/12</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statics in Motion (interactive) -->
+    <section id="sandbox" class="section section-sandbox">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="idx idx-sym">&Sigma;</span>
+          <h2>Statics in Motion</h2>
+        </header>
+        <p class="sandbox-intro reveal">
+          Drag the load along the beam. The reactions, shear, and moment update
+          live — the same first-principles statics behind every member I design.
+        </p>
+        <div class="beam-wrap reveal">
+          <div class="beam-stage">
+            <svg id="beam" viewBox="0 0 880 540" role="img"
+                 aria-label="Interactive simply supported beam with live shear and bending-moment diagrams"></svg>
+          </div>
+          <aside class="calc-sheet" aria-live="polite">
+            <h4>Calc sheet</h4>
+            <div class="calc-given">
+              <span>Given</span>
+              P = 12 k&nbsp;&nbsp;·&nbsp;&nbsp;L = 24 ft
+            </div>
+            <ul class="calc-list">
+              <li><span class="cl-eq">a</span><span class="cl-val" id="b-a">—</span></li>
+              <li><span class="cl-eq">R<sub>A</sub> = P(L−a)/L</span><span class="cl-val" id="b-ra">—</span></li>
+              <li><span class="cl-eq">R<sub>B</sub> = Pa/L</span><span class="cl-val" id="b-rb">—</span></li>
+              <li class="cl-hi"><span class="cl-eq">M<sub>max</sub> = Pa(L−a)/L</span><span class="cl-val" id="b-mmax">—</span></li>
+            </ul>
+            <p class="calc-foot">Simply supported · single point load</p>
+          </aside>
         </div>
       </div>
     </section>
@@ -355,6 +427,9 @@
     </div>
   </footer>
 
+  <script src="lattice.js"></script>
+  <script src="model.js"></script>
+  <script src="beam.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
