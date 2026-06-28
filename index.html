@@ -125,24 +125,27 @@
           </div>
           <div class="about-body">
             <p class="about-lead reveal">
-              I'm a structural engineering professional and Engineer-in-Training
-              based in the Los Angeles area — currently designing real structures
-              as an intern at Hohbach-Lewin, Inc.
+              I'm a Structural Engineering MS student at UCSD and an
+              Engineer-in-Training at Hohbach-Lewin, Inc.
             </p>
             <p class="reveal">
-              I'm pursuing my Master of Science in Structural Engineering at
-              UC&nbsp;San&nbsp;Diego (expected 2027), building on bachelor's degrees in
-              Structural Engineering at UC&nbsp;San&nbsp;Diego and Engineering Physics at
-              Biola University through a 3+2 program. I passed the FE Civil exam in
-              2025 and earned my EIT in early 2026 — the first steps toward full
-              PE/SE licensure.
+              I am on track to complete my MS in Structural Engineering in the
+              Spring of 2027, building on my BS in Structural Engineering from
+              UCSD and BS in Engineering Physics from Biola University through a
+              3+2 program. I earned my Civil EIT in early 2026 and am planning on
+              taking the PE Civil: Structural exam in early 2027, the next step to
+              full licensure.
             </p>
             <p class="reveal">
-              My academic design work spans full steel and concrete buildings, and
-              my internship has me deep in real wood-structure design — lateral
-              systems, connections, and calculation packages. I care about sound
-              load paths, buildable details, and clear communication. Good
-              structure is rarely seen — but it's always felt.
+              My academic breadth encompasses the design of steel and concrete
+              structures (<a class="inline-link" href="#projects">See Projects tab</a>), and at Hohbach-Lewin I've learned to
+              design timber structures as well, beginning with a design basis to
+              submitting a final calculation package.
+            </p>
+            <p class="reveal">
+              Outside of structures, I enjoy discussing philosophy, religion,
+              technology, and am always looking to learn something new.
+              <em>"The unexamined life is not worth living"</em> — Plato.
             </p>
           </div>
         </div>
@@ -217,6 +220,13 @@
               <li>Computed seismic and wind loads to ASCE&nbsp;7-22; checked drift and ductility in RISA-3D.</li>
               <li>Detailed special moment frames by capacity design using the Strong-Column / Weak-Beam philosophy.</li>
             </ul>
+            <div class="project-files">
+              <span class="files-label">Reports</span>
+              <a class="file-link" href="Capstone%20Reports/SE140A-Project-1-Report.pdf" target="_blank" rel="noopener">Project 1 <span class="file-ext">PDF</span></a>
+              <a class="file-link" href="Capstone%20Reports/SE140A-Project-2-Report.pdf" target="_blank" rel="noopener">Project 2 <span class="file-ext">PDF</span></a>
+              <a class="file-link" href="Capstone%20Reports/SE140A-Project-3-Report.pdf" target="_blank" rel="noopener">Project 3 <span class="file-ext">PDF</span></a>
+              <a class="file-link file-link--model to-model" href="#models" data-model="steel">Interactive 3D model <span class="file-ext">3D</span></a>
+            </div>
           </article>
 
           <article class="project reveal">
@@ -232,7 +242,35 @@
               <li>Analyzed cantilever retaining walls for sliding, overturning, and bearing-pressure stability.</li>
               <li>Engineered shear walls and boundary elements to meet seismic and ductility demands.</li>
             </ul>
+            <div class="project-files">
+              <span class="files-label">Reports</span>
+              <a class="file-link" href="Capstone%20Reports/SE140B-Project-1-Report.pdf" target="_blank" rel="noopener">Project 1 <span class="file-ext">PDF</span></a>
+              <a class="file-link" href="Capstone%20Reports/SE140B-Project-2-Report.pdf" target="_blank" rel="noopener">Project 2 <span class="file-ext">PDF</span></a>
+              <a class="file-link" href="Capstone%20Reports/SE140B-Project-3-Report.pdf" target="_blank" rel="noopener">Project 3 <span class="file-ext">PDF</span></a>
+              <a class="file-link file-link--model to-model" href="#models" data-model="concrete">Interactive 3D model <span class="file-ext">3D</span></a>
+            </div>
           </article>
+        </div>
+
+        <!-- Interactive 3D structural models -->
+        <div id="models" class="models reveal">
+          <div class="models-head">
+            <div class="model-switch" role="tablist" aria-label="Choose a structure">
+              <button data-model="steel" class="active">SE&nbsp;140A · Steel</button>
+              <button data-model="concrete">SE&nbsp;140B · Concrete</button>
+            </div>
+            <p class="model-hint">Drag to orbit · scroll to zoom · toggle layers</p>
+          </div>
+          <div class="models-stage">
+            <div id="model-canvas" class="model-canvas" aria-label="Interactive 3D structural model"></div>
+            <aside class="model-readout">
+              <h3 id="model-title"></h3>
+              <p id="model-desc"></p>
+              <dl id="model-stats"></dl>
+              <div id="model-layers" class="model-layers" aria-label="Toggle structural systems"></div>
+            </aside>
+          </div>
+          <noscript><p class="model-hint">Enable JavaScript to explore the interactive 3D models.</p></noscript>
         </div>
       </div>
     </section>
@@ -382,23 +420,6 @@
       </div>
     </section>
 
-    <!-- Testimonial -->
-    <section class="section section-quote">
-      <div class="container">
-        <figure class="quote reveal">
-          <blockquote>
-            “Isaac's keen initiative to produce work of only the highest quality
-            is just as rare as it is renowned by all of our peers and professors.
-            Integrity is the unmistakable cornerstone of his character.”
-          </blockquote>
-          <figcaption>
-            <span class="q-name">Carol Jin, EIT</span>
-            <span class="q-role">Water Services Intern, CDM Smith — studied alongside Isaac at Biola</span>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
     <!-- Contact -->
     <section id="contact" class="section section-contact">
       <div class="container">
@@ -431,5 +452,11 @@
   <script src="model.js"></script>
   <script src="beam.js"></script>
   <script src="main.js"></script>
+
+  <!-- Interactive 3D models (Three.js bundled locally) -->
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three.module.js" } }
+  </script>
+  <script type="module" src="structures3d.js"></script>
 </body>
 </html>
